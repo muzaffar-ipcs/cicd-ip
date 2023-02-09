@@ -1,0 +1,21 @@
+<section id="header" class="jumbotron text-center">
+  <h2 class="display-3">Business Cards</h2>
+</section>
+<section id="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4" *ngFor="let bcard of businesscards">
+        <div class="card" >
+          <img
+            src="{{imagepath}}{{bcard.profile_photo}}"
+            alt="" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{bcard.firstName}} {{bcard.lastName}}</h5>
+            <p class="card-text"></p>
+            <a [routerLink]="['view',bcard._id]" class="btn btn-dark">View Vcard</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

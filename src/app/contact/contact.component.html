@@ -1,0 +1,162 @@
+<section class="pb-0 contactsection">
+  <div class="container" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-content h-100">
+          <div class="">
+            <!-- d-flex flex-column justify-content-center align-items-center h-100 -->
+          <div class="describe">
+            <!-- d-flex flex-row justify-content-center align-items-center -->
+            <!-- <img src="../../../assets/img/home/qrcode.webp" alt="qrcode" width="104" height="108">
+            <div class="call">
+              <h1 class="m-0 ms-4">Call</h1>
+              <h1 class="m-0 ms-4">Pixtar.</h1>
+            </div> -->
+            <a class="" href="p/kbn" target="_blank">  <img src="{{baseUrl}}/img/logos/qr-code-call-pixtar.svg" alt=""></a>
+          </div>
+          <p class="short-desc">Describe your project and leave us your contact info, we’ll get back to you ASAP.</p>
+        </div>
+          
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="contact-form">
+          <div class="form">
+            <div class="d-flex flex-column justify-content-center align-items-start h-100">
+              <!-- <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="php-email-form w-100">
+                <div class="form-floating mb-3">
+                  <input type="name" name="name"  [(ngModel)]="model.name" class="form-control" id="floatingInput" placeholder="name" required #name="ngModel">
+                  <label for="floatingInput" class="mt-0">What’s your name?</label>
+                  <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
+                    <div *ngIf="name.errors">
+                      Name is required.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="email"  name="email" [(ngModel)]="model.email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                  <label for="floatingInput" class="mt-0">What’s Your E-mail?</label>
+                  <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+                    <div *ngIf="email.errors.required">Email is required.</div>
+                    <div *ngIf="email.errors.email">Email must be a valid email address.</div>
+                  </div>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="tel" class="form-control" name="phone"  [(ngModel)]="model.phone" id="floatingInput" placeholder="mobile">
+                  <label for="floatingInput" class="mt-0">What’s your Phone Number?</label>
+                </div>
+                <div class="detail w-100 d-none d-sm-block">
+                  <ul class="d-flex flex-row justify-content-space-between align-items-center flex-wrap pl-0">
+                    <li><input type="button" id='branding' class="button" (click)="selectSub('branding')" value="Branding"></li>
+                    <li><input type="button" id='website' class="button" (click)="selectSub('website')" value="Website"> </li>
+                    <li><input type="button" id='eCommerce' class="button" (click)="selectSub('eCommerce')" value="eCommerce"></li>
+                    <li><input type="button" id='enterprise' class="button" (click)="selectSub('enterprise')" value="Enterprise Solution"></li>
+                    <li><input type="button" id='seo' class="button" (click)="selectSub('seo')" value="SEO"></li>
+                  </ul>
+                </div>
+                <div class="form-floating">
+                  <textarea name="message" class="form-control" placeholder="Leave a comment here" id="floatingTextarea" [(ngModel)]="model.message" required></textarea>
+                  <label for="floatingTextarea" class="mt-0">Tell us about your project :)</label>
+                  <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error">
+                    <div *ngIf="message.errors.required">Comments is required.</div>
+                  </div>
+                </div>
+
+                <div class="detail w-100 d-block d-sm-none mt-4">
+                  <ul class="d-flex flex-row justify-content-space-between align-items-center justify-content-center flex-wrap pl-0 mb-0">
+                    <li><input type="button" id='branding' class="button" (click)="selectSub('branding')" value="Branding"></li>
+                    <li><input type="button" id='website' class="button" (click)="selectSub('website')" value="Website"> </li>
+                    <li><input type="button" id='eCommerce' class="button" (click)="selectSub('eCommerce')" value="eCommerce"></li>
+                    <li><input type="button" id='enterprise' class="button" (click)="selectSub('enterprise')" value="Enterprise Solution"></li>
+                    <li><input type="button" id='seo' class="button" (click)="selectSub('seo')" value="SEO"></li>
+                  </ul>
+                </div>
+
+                <div class="w-100 w-100 text-center text-sm-start">
+                <input type="submit" name="submit" value="Send" class="float-none float-sm-end float-md-end float-lg-end float-xl-end float-xxl-end mt-5 submit" [disabled]="!contactForm.form.valid">
+              </div>
+              </form> -->
+              <form [formGroup]="addCareerForm" (ngSubmit)="onSubmit()" #contactForm="ngForm" class="php-email-form w-100" method="post" >
+                <div class="form-floating mb-3">
+                    <!-- <div class="form-group">  -->
+                        <input type="text" name="name" autocomplete="off" formControlName="name"
+                        class="form-control" id="floatingInput" placeholder="name">
+                        <label for="floatingInput" class="mt-0">What's your name?</label>
+                        <div *ngIf="submitted && hasError('name','required')" class="error">
+                          <div>
+                            Name is required.
+                          </div>
+                        </div>
+                    <!-- </div>   -->
+                </div>
+                <div class="form-floating mb-3">
+                    <!-- <div class="form-group">  -->
+                      <input type="email" name="email" autocomplete="off" formControlName="email"
+                        class="form-control" id="floatingInput" placeholder="email">
+                        <label for="floatingInput" class="mt-0">What’s Your E-mail?</label>
+                        <div *ngIf="submitted && hasEmailError('email','required')" class="error">
+                          <div>
+                            {{hasEmailError('email','required')}}
+                          </div>
+                        </div>
+                    <!-- </div> -->
+                  </div>
+                  <div class="form-floating mb-3">
+                    <!-- <div class="form-group">  -->
+                      
+                        <input type="tel" class="form-control" name="phone"  autocomplete="off"
+                         formControlName="phone" id="floatingInput" placeholder="phone">
+                         <label for="floatingInput" class="mt-0">What's your Phone Number?</label>
+                        <div *ngIf="submitted && hasError('phone','required')" class="error">
+                          <div>
+                            Phone Number is required.
+                          </div>
+                        </div>
+                    <!-- </div> -->
+                  </div>
+                  <div class="detail w-100 d-none d-sm-block mt-4">
+                    <ul class="d-flex flex-row justify-content-space-between align-items-center flex-wrap pl-0 mb-0">
+                      <li><input type="button" id='branding' class="button" (click)="selectSub('branding')" value="Branding"></li>
+                      <li><input type="button" id='website' class="button" (click)="selectSub('website')" value="Website"> </li>
+                      <li><input type="button" id='eCommerce' class="button" (click)="selectSub('eCommerce')" value="eCommerce"></li>
+                      <li><input type="button" id='enterprise' class="button" (click)="selectSub('enterprise')" value="Enterprise Solution"></li>
+                      <li><input type="button" id='seo' class="button" (click)="selectSub('seo')" value="SEO"></li>
+                    </ul>
+                  </div>
+                    <div class="form-floating"> 
+                      
+                      <textarea name="message" class="form-control" autocomplete="off"
+                         formControlName="message" id="floatingTextarea" placeholder="message" required></textarea>
+                         <label for="floatingInput" class="mt-0">Tell us about your project :)</label>
+                        <div *ngIf="submitted && hasError('message','required')" class="error">
+                          <div>
+                            Comments is required.
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="detail w-100 d-block d-sm-none mt-4">
+                      <ul class="d-flex flex-row justify-content-space-between align-items-center justify-content-center flex-wrap pl-0 mb-0">
+                        <li><input type="button" id='branding' class="button" (click)="selectSub('branding')" value="Branding"></li>
+                        <li><input type="button" id='website' class="button" (click)="selectSub('website')" value="Website"> </li>
+                        <li><input type="button" id='eCommerce' class="button" (click)="selectSub('eCommerce')" value="eCommerce"></li>
+                        <li><input type="button" id='enterprise' class="button" (click)="selectSub('enterprise')" value="Enterprise Solution"></li>
+                        <li><input type="button" id='seo' class="button" (click)="selectSub('seo')" value="SEO"></li>
+                      </ul>
+                    </div>
+                    
+                <div class="w-100 w-100 text-center text-sm-start">
+                  <input type="submit" name="submit" value="Send" class="float-none float-sm-end float-md-end float-lg-end float-xl-end float-xxl-end mt-5 submit">
+                </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="candely">
+<div class="calendly-inline-widget" data-url="https://calendly.com/pixtar/121" style="min-width:320px;height:630px;"></div>
+</section>

@@ -1,0 +1,111 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500" >
+	<div class="container-fluid">
+		<div class=" w-100">
+			<div class="col-lg-10 offset-lg-1">
+				<div class="menu-container" style="width:100%;">
+					<div class="d-flex justify-content-between menu-block">
+						<div class="brand">
+							<a href="/"> 
+								<!-- *ngIf="showBlackbars() && ifblackbar"  -->
+								<img *ngIf="showBlackbars() && ifblackbar" src="{{baseUrl}}/img/logos/pixtar-main-logo.svg" alt="" width="160" class="logo1">
+								<img *ngIf="showBlackbars() && ifwhitebar" src="{{baseUrl}}/img/logos/pixtar-main-logo-white.svg" alt="" width="160" class="logo1">
+								<img *ngIf="showBlackbars() && ifblackbar" src="{{baseUrl}}/img/logos/pixtar-black-logo.svg" alt="pixtar" width="40" class="logo2">
+								<img *ngIf="showBlackbars() && ifwhitebar" src="{{baseUrl}}/img/logos/pixtar_white.svg" alt="pixtar" width="40" class="logo2"></a>
+						</div>
+						<div class="menu-list">
+							<a href="/"> 
+								<img *ngIf="showBlackbars() && ifblackbar" src="{{baseUrl}}/img/home/home.png" alt="homeicon" class="home-icon" (mouseenter)="func()" (mouseleave)="func2()">
+								<img *ngIf="showBlackbars() && ifwhitebar" src="{{baseUrl}}/img/home/homewhite.png" alt="homeicon" class="home-icon" (mouseenter)="func()" (mouseleave)="func3()">
+							</a>
+							<!-- <h3>Menu</h3> -->
+							<!-- <ul>
+								<li> <i class="fa fa-arrow-left"></i> <a href="#/projects">Projects</a> </li>
+								<li> <i class="fa fa-arrow-left"></i> <a href="#/about">About</a> </li>
+								<li> <i class="fa fa-arrow-left"></i> <a href="#/process">Process</a></li>
+								<li> <i class="fa fa-arrow-left"></i> <a href="#/contact">Contact</a> </li>
+							</ul> -->
+							<input type="checkbox" id="burger-toggle">
+							<label  for="burger-toggle" class="burger-menu" (click)="labelchange()">
+								<!-- (click) ="selectmenu('all')" -->
+								<div class="line"></div>
+								<div class="line"></div>
+								<div class="line"></div>
+								<!-- *ngIf="showBlackbars() && ifblackbar" -->
+								<!-- <img *ngIf="showBlackbars() && ifblackbar" src="{{baseUrl}}/img/home/menu.svg" alt="" width="24"  id="bars" >
+								<img *ngIf="showBlackbars() && ifwhitebar" src="{{baseUrl}}/img/home/menu-white.svg" alt="" width="24" id="bars"> -->
+							</label>
+							<!-- *ngIf="showBlackbars() && ifblackbar" -->
+							<div class="labelmenu">
+							<h3 *ngIf="showBlackbars() && ifblackbar" class="cstmenu showcls">Close</h3>
+							<h3 *ngIf="showBlackbars() && ifwhitebar" class="cstmenu text-white showcls">Close</h3>
+							<h3 *ngIf="showBlackbars() && ifblackbar" class="d-none d-sm-none d-md-none d-lg-block cstmenu showcls2">Menu</h3>
+							<h3 *ngIf="showBlackbars() && ifwhitebar" class="d-none d-sm-none d-md-none d-lg-block cstmenu text-white showcls2">Menu</h3>
+						</div>
+							<div  class="menu" id="menu">
+								<!-- *ngIf="!isMenuActive" -->
+							<img *ngIf="showBlackbars() && ifblackbar" class="logo" src="{{baseUrl}}/img/logos/pixtar-black-logo.svg" alt="pixtar" width="40" (click)="selectLink('/')">
+							<img *ngIf="showBlackbars() && ifwhitebar" class="logo" src="{{baseUrl}}/img/logos/pixtar_white.svg" alt="pixtar" width="40" (click)="selectLink('/')">
+								<div class="menu-inner">
+									<ul class="menu-nav" id="navMenus">
+										<li class="menu-nav-item" id="home"><a class="menu-nav-link" (click)="selectLink('/')"><span>
+											<div>
+												<img *ngIf="showBlackbars() && ifblackbar" src="{{baseUrl}}/img/home/home.png" alt="homeicon" class="menuhome" (mouseenter)="func4()" (mouseleave)="func5()">
+												<img *ngIf="showBlackbars() && ifwhitebar" src="{{baseUrl}}/img/home/homewhite.png" alt="homeicon" class="menuhome" (mouseenter)="func4()" (mouseleave)="func6()">
+											</div>
+										</span></a></li>
+										<li class="menu-nav-item" id="projects"><a class="menu-nav-link" (click)="selectLink('projects')">
+											<span>
+											<!-- 	 -->
+													<div>Projects</div>
+												</span></a></li>
+										<li class="menu-nav-item" id="about"><a class="menu-nav-link"  (click)="selectLink('about')"><span>
+													<div>About</div>
+												</span></a></li>
+										<li class="menu-nav-item" id="process"><a class="menu-nav-link" (click)="selectLink('process')"><span>
+													<div>Process</div>
+												</span></a></li>
+										<li class="menu-nav-item" id="contact"><a class="menu-nav-link lastanch"  (click)="selectLink('contact')"><span>
+													<div class="d-flex flex-row" >Contact <img src="{{baseUrl}}/img/home/contactarrow.svg" alt="" width="30" class="arrowimg" ></div>
+												</span></a></li>
+												<!-- (mouseenter)="arrwhoverfunc()" (mouseleave)="arrwmouseleavefunc()" -->
+									</ul>
+									<!-- <div class="gallery">
+										<div class="title">
+											<p>Sora Gallery</p>
+										</div>
+										<div class="images">
+											<a class="image-link" href="#">
+												<div class="image" data-label="Star"><img
+														src="https://i.loli.net/2019/11/23/cnKl1Ykd5rZCVwm.jpg" alt=""></div>
+											</a>
+											<a class="image-link" href="#">
+												<div class="image" data-label="Sun"><img src="https://i.loli.net/2019/11/16/FLnzi5Kq4tkRZSm.jpg"
+														alt=""></div>
+											</a>
+											<a class="image-link" href="#">
+												<div class="image" data-label="Tree"><img
+														src="https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg" alt=""></div>
+											</a>
+											<a class="image-link" href="#">
+												<div class="image" data-label="Sky"><img src="https://i.loli.net/2019/10/18/buDT4YS6zUMfHst.jpg"
+														alt=""></div>
+											</a>
+										</div>
+									</div> -->
+									<div class="gallery">
+										<div class="position-absolute  menu-left-content">
+											<p>Creative agency based in Dubai, </p>
+											<p>United Arab Emirates</p>
+											<p class="text-color">+971 52 7930781</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+<!-- <h1>Click the burger menu to see the magic.</h1> -->
