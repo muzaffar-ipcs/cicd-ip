@@ -93,7 +93,7 @@ export class NavbarComponent implements OnInit {
         if(data == 'process'){
             this.ifbarcliked = false;
         }
-        $('#burger-toggle').prop('checked', false); 
+        $('#burger-toggle').prop('checked', false);
         this.route.navigate([data]);
         $('.showcls').removeClass("active");
         $('.showcls2').removeClass("active");
@@ -125,7 +125,7 @@ export class NavbarComponent implements OnInit {
         }
     }
     func(){
-        $(".home-icon").attr("src", this.baseUrl + "/img/home/homehover.png");
+        $(".home-icon").attr("src", this.baseUrl + "/img/home/ipcs/homehover.png");
     }
     func2(){
         $(".home-icon").attr("src", this.baseUrl + "/img/home/home.png");
@@ -135,7 +135,7 @@ export class NavbarComponent implements OnInit {
     }
 
     func4(){
-        $(".menuhome").attr("src", this.baseUrl + "/img/home/homehover.png");
+        $(".menuhome").attr("src", this.baseUrl + "/img/home/ipcs/homehover.png");
     }
     func5(){
         $(".menuhome").attr("src", this.baseUrl + "/img/home/home.png");
@@ -145,11 +145,11 @@ export class NavbarComponent implements OnInit {
     }
     // arrwhoverfunc(){
     //   $(".arrowimg").attr("src", this.baseUrl + "/img/home/contactarrow-black.svg");
-     
+
     // }
     // arrwmouseleavefunc(){
     //     $(".arrowimg").attr("src", this.baseUrl + "/img/home/contactarrow.svg");
-     
+
     // }
   isHomemenu() {
     $('#home').removeClass('active');
@@ -162,7 +162,7 @@ export class NavbarComponent implements OnInit {
     _location = _location.split('/')[1];
       if(_location == 'home' || _location=='#'){
    		 $('#home').addClass('active');
-       $(".menuhome").attr("src", currectUrl + "/img/home/homehover.png");
+       $(".menuhome").attr("src", currectUrl + "/img/home/ipcs/homehover.png");
       }
 			else if(_location == 'projects'){
 				$('#projects').addClass('active');
@@ -181,7 +181,7 @@ export class NavbarComponent implements OnInit {
                 // $(".arrowimg").attr("src", currectUrl + "/img/home/contactarrow-black.svg");
                 $(".menuhome").attr("src", this.baseUrl + "/img/home/home.png");
 			}
-         
+
   }
     labelchange(){
       // $('.showcls').css({"display":"block","position":"relative", "pz-indexosition":"1"});
