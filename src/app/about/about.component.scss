@@ -167,7 +167,7 @@ section {
       text-decoration: none;
       color: #1d1d1f;
       &:hover {
-        color: #da9777;
+        color: #007de4;
       }
     }
     .link {
@@ -175,10 +175,10 @@ section {
       color: #1d1d1f;
       cursor: pointer;
       &:hover {
-        color: #da9777;
+        color: #007de4;
       }
       &:focus {
-        color: #da9777;
+        color: #007de4;
       }
     }
     .points {
@@ -189,7 +189,7 @@ section {
   }
 }
 .color1 {
-  color: #da9777;
+  color: #007de4;
 }
 .barcelony {
   font-family: "barcelony";
@@ -225,7 +225,7 @@ section {
   }
   &::before {
     content: "";
-    background: #de9b7a;
+    background: #007de4;
     height: 33px;
     width: 6px;
     position: relative;

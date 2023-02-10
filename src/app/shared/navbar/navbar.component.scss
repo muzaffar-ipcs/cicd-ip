@@ -77,18 +77,18 @@
       &:active,
       &:visited {
         i {
-          color: #de9b7a;
+          color: #007de4;
           opacity: 1;
           transform: rotateZ(60deg);
         }
         a {
-          color: #de9b7a;
+          color: #007de4;
           // font-weight: bold;
         }
       }
     }
     li.menu-nav-item.active a {
-      color: #de9b7a;
+      color: #007de4;
     }
     li.menu-nav-item.active .lastanch {
       color: #000 !important;
@@ -113,13 +113,13 @@
         a {
           color: #fff;
           &:hover {
-            color: #de9b7a;
+            color: #007de4;
           }
         }
       }
       li.active {
         a {
-          color: #de9b7a;
+          color: #007de4;
         }
       }
     }
@@ -545,7 +545,7 @@ p {
 /************************** new menu css ends ***************************/
 .lastanch {
   font-weight: bold !important;
-  color: #de9b7a !important;
+  color: #007de4 !important;
   &:hover {
     color: #000 !important;
   }
@@ -580,7 +580,7 @@ p {
     }
   }
   .text-color {
-    color: #de9b7a;
+    color: #007de4;
   }
   p:nth-child(3) {
     font-weight: 600;

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pixtarAE": {
+    "ingepix": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pixtarAE/browser",
+            "outputPath": "dist/ingepix/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -81,10 +81,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pixtarAE:build:production"
+              "browserTarget": "ingepix:build:production"
             },
             "development": {
-              "browserTarget": "pixtarAE:build:development"
+              "browserTarget": "ingepix:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -92,7 +92,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pixtarAE:build"
+            "browserTarget": "ingepix:build"
           }
         },
         "test": {
@@ -116,7 +116,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/pixtarAE/server",
+            "outputPath": "dist/ingepix/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss"
@@ -143,12 +143,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "pixtarAE:build:development",
-              "serverTarget": "pixtarAE:server:development"
+              "browserTarget": "ingepix:build:development",
+              "serverTarget": "ingepix:server:development"
             },
             "production": {
-              "browserTarget": "pixtarAE:build:production",
-              "serverTarget": "pixtarAE:server:production"
+              "browserTarget": "ingepix:build:production",
+              "serverTarget": "ingepix:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -156,8 +156,8 @@
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "browserTarget": "pixtarAE:build:development",
-            "serverTarget": "pixtarAE:server:development",
+            "browserTarget": "ingepix:build:development",
+            "serverTarget": "ingepix:server:development",
               "routes": [
                 "/",
                 "/home",
@@ -172,12 +172,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "pixtarAE:build:production",
-              "serverTarget": "pixtarAE:server:production"
+              "browserTarget": "ingepix:build:production",
+              "serverTarget": "ingepix:server:production"
             },
             "development": {
-              "browserTarget": "pixtarAE:build:development",
-              "serverTarget": "pixtarAE:server:development"
+              "browserTarget": "ingepix:build:development",
+              "serverTarget": "ingepix:server:development"
             }
           },
           "defaultConfiguration": "production"
