@@ -1,8 +1,8 @@
 section.cst-tabs {
-  margin-top: 15rem;
-  @media(max-width:480px){
-    margin-top: 10rem;
-  }
+  // margin-top: 15rem; temporary commented because of banner section adding
+  // @media(max-width:480px){
+  //   margin-top: 10rem;
+  // }
   .nav-pills {
     margin-bottom: 15px;
     display: flex;
@@ -178,5 +178,131 @@ section.cst-tabs {
   @media(max-width:767px){
     width: 80%;
 
+  }
+}
+.service-banner {
+  // background: url("../../assets/img/logos/light-gray.svg");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: 30%;
+ @media(max-width:480px){
+  .vh-100{
+    height: 86vh !important;
+  }
+}
+  background: url('../../assets/img/home/pixtar-splitlogo.svg');
+  background-repeat: no-repeat;
+  background-position: 100% 92%;
+  background-size: 23%;
+  @media(max-width:767px){
+    background-size: 60%;
+  }
+  @media(max-width:575px){
+    background-position: 100% 103%;
+    min-height: 100vh;
+    height: 100%;
+  }
+  .block-content {
+    // @media(max-width:480px){
+    // width: 286px;
+    // }
+    // @media(max-width:380px){
+    //   width: auto;
+    //   }
+    h1 {
+      margin-top: 0;
+      font-size: 106px;
+      font-weight: bold;
+      color: #1d1d1f;
+      line-height: normal;
+      @media (max-width: 1366px) {
+        font-size: 90px;
+      }
+      @media (max-width: 1024px) {
+        font-size: 80px;
+      }
+      @media (max-width: 991px) {
+        font-size: 60px;
+      }
+      // @media (max-width: 767px) {
+      //   font-size: 40px;
+      // }
+      @media (max-width: 480px) {
+        // font-size: 32px;
+        font-size: 48px;
+      }
+      @media (max-width: 380px) {
+        font-size: 40px;
+      }
+      // @media (max-width: 355px) {
+      //   font-size: 24px;
+      // }
+    }
+    p {
+      // font-size: 32px;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 0;
+      // color: #878787;
+      color: #101010;
+      @media (max-width: 1366px) {
+        font-size: 30px;
+      }
+      @media (max-width: 1024px) {
+        font-size: 28px;
+      }
+      @media (max-width: 991px) {
+        font-size: 20px;
+      }
+      @media (max-width: 767) {
+        font-size: 18px;
+      }
+      @media (max-width: 480px) {
+        font-size: 16px;
+      }
+    }
+    img.hand {
+      margin-left: 20px;
+      margin-top: -40px;
+      transition: transform 0.7s ease-in-out;
+      @media (max-width: 767px) {
+        width: 60px;
+      }
+      @media (max-width: 600px) {
+        margin-left: 10px;
+      }
+      @media (max-width: 480px) {
+        margin-top: -24px;
+        width: 40px;
+      }
+      @media (max-width: 380px) {
+        margin-left: 5px;
+      }
+      &:hover {
+        transform: rotate(-30deg);
+      }
+    }
+  }
+  #lottie{
+    // background-color:#ffffff;
+    // width:100%;
+    // height:100%;
+    display:block;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    text-align: center;
+    opacity: 1;
+    position: relative;
+    top: -1.5rem;
+    // width: 14%;
+    width: 16%;
+    @media(max-width:991px){
+      top: -1.5rem;
+    }
+    @media(max-width:480px){
+      top: -0.5rem;
+      width: 20%;
+    }
   }
 }
