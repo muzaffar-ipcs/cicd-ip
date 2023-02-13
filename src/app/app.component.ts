@@ -15,7 +15,7 @@ export class AppComponent {
     ngOnInit() {
         AOS.init();
         this.metaTagService.addTags([
-            { name: 'keywords', content: 'pixtar.ae, pixtar' },
+            { name: 'keywords', content: 'ingeniouspix.com, ingeniouspix creative studios' },
             { name: 'robots', content: 'index, follow' },
             { name: 'author', content: 'Ipcs' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1' },

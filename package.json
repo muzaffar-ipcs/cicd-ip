@@ -12,7 +12,7 @@
     "build:ssr": "ng build && ng run ingepix:server",
     "prerender": "ng run ingepix:prerender",
     "prod": "ng build --configuration production --aot",
-    "pixtar": "ng run ingepix:prerender"
+    "ingepix": "ng run ingepix:prerender"
   },
   "private": true,
   "dependencies": {
