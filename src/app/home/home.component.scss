@@ -73,7 +73,7 @@ body {
     font-size: 32px;
     font-weight: 400;
     // width: 80%;
-    color:#101010;
+    color: #101010;
     @media (max-width: 1440px) {
       font-size: 28px;
     }
@@ -165,9 +165,9 @@ body {
     bottom: 7rem !important;
   }
   @media (max-width: 480px) {
-   width: 370px;
-   padding: 0px 10px;
-   margin: 0 auto;
+    width: 370px;
+    padding: 0px 10px;
+    margin: 0 auto;
   }
   @media (max-width: 380px) {
     width: 315px;
@@ -198,6 +198,76 @@ body {
   }
 }
 
+#portfolio_sec {
+  .text-center {
+    padding: 0;
+  }
+  h3.margin20.col_gray {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-family: $font-family;
+    color: #000;
+    @media (max-width: 991px) {
+      font-size: 20px;
+    }
+    @media (max-width: 575px) {
+      font-size: 18px;
+    }
+  }
+  h1 {
+    font-family: $font-family;
+    font-size: 65px;
+    font-weight: 600;
+    line-height: normal;
+    color: #000;
+    @media (max-width: 1366px) {
+      font-size: 55px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 50px;
+    }
+    @media (max-width: 991px) {
+      font-size: 38px;
+    }
+    @media (max-width: 575px) {
+      font-size: 32px;
+    }
+  }
+
+  .home-service-box {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    @media (max-width: 991px) {
+      height: 100%;
+      padding: 20px 0px;
+    }
+    h3 {
+      font-size: 20px;
+      line-height: normal;
+      font-weight: 600;
+      font-family: $font-family;
+      color: #000;
+      @media (max-width: 991px) {
+        font-size: 16px;
+      }
+      @media (max-width: 575px) {
+        font-size: 14px;
+      }
+    }
+  }
+  .home-service-box.brb-0 {
+    border-bottom: none;
+  }
+  .home-service-box.brb-0 {
+    border-bottom: none;
+  }
+}
 .custom-collapse {
   padding: 20px;
   overflow: hidden;
@@ -279,18 +349,18 @@ body {
   .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color:#0087ca;
+    color: #0087ca;
   }
 
   .hover-underline-animation:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     transform: scaleX(0);
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color:#101010;
+    background-color: #101010;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
     background-image: none !important;
@@ -303,6 +373,9 @@ body {
 }
 .toppadding {
   padding-top: 80px;
+  @media (max-width: 991px) {
+    padding-top: 50px;
+  }
 }
 .bannerdrk {
   background-color: #000;
@@ -584,19 +657,21 @@ body {
     padding-left: 20px;
     padding-right: 20px;
   }
-  a.more{
+  a.more {
     margin-top: 15px;
     // color: #e1a181;
     background: -webkit-linear-gradient(#101010, #000000ab);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
     width: 55px;
     font-size: 20px;
     // font-family: 'barcelony';
-    &:hover, &:focus, &:active{
+    &:hover,
+    &:focus,
+    &:active {
       background: -webkit-linear-gradient(#d16a4c, #e8a18d);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -642,9 +717,9 @@ body {
     }
   }
 }
-@media all and (orientation:landscape) {
-  @media(max-width:991px){
-    .h1{
+@media all and (orientation: landscape) {
+  @media (max-width: 991px) {
+    .h1 {
       font-size: 38px;
     }
   }
