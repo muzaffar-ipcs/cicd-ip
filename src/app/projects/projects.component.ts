@@ -129,6 +129,9 @@ get_AllProjects() {
                   // this.filterdCategory = response.result;
                 }
               });
+              if(response.result && this.currentLimit >= response.count){
+                this.isactive = false;
+              }
             }
 
           } else if (response.code == 400) {
@@ -144,10 +147,11 @@ get_AllProjects() {
 
 getFilterProjects(data:any) {
   if(data == 'all'){
-    this.filterdCategory = this.allprojects;
-    this.isactive=true;
+    this.isactive = true;
+    // this.currentLimit = 6;
+    this.get_AllProjects();
   } else {
-    this.isactive=false;
+    this.isactive = false;
   if(this.allprojects && this.allprojects.length > 0){
     this.filterdCategory = [];
     this.allprojects.forEach(project => {
