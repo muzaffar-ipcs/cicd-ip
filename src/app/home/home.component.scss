@@ -267,6 +267,17 @@ body {
   .home-service-box.brb-0 {
     border-bottom: none;
   }
+  .home-service-box.brr-0 {
+    border-right: none;
+  }
+  @media (max-width: 575px) {
+    .brrm-1 {
+      border-right: 1px solid #ededed !important;
+    }
+    .brtm-1 {
+      border-top: 1px solid #ededed !important;
+    }
+  }
 }
 .custom-collapse {
   padding: 20px;
