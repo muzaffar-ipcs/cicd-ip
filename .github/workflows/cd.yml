@@ -18,7 +18,7 @@ jobs:
             - name: Install Packages and Build Application
               run: |
                 npm install -g @vue/cli npm
-                npm install --f
+                npm install --force
                 npm build
             - name: Deploy
               uses: s0/git-publish-subdir-action@develop
