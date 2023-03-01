@@ -29,4 +29,5 @@ jobs:
           script: |
             cd /var/www/nodejs/ip
             git pull
-            # sudo npm install --force
+            npm install --force
+            npm run ingepix
