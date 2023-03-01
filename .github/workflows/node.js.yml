@@ -23,10 +23,10 @@ jobs:
     - name: SSH Remote Commands
       uses: appleboy/ssh-action@v0.1.2
       with:
-        key: ${{secrets.SECRETS_IDT}}
         host: ${{secrets.SECRETS_CLOUD}}
         username: ${{secrets.SECRETS_ID}}
-
+        key: ${{secrets.SECRETS_IDT}}
+        port : ${{secrets.SECRETS_PORT}}
         script: |
           cd /var/www/nodejs/ip
           git pull
