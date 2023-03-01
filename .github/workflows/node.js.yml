@@ -31,3 +31,4 @@ jobs:
             git pull
             npm install --force
             npm run build
+            cp -r /var/www/nodejs/ip/dist/ingepix/browser /var/www/html/ip

@@ -3,7 +3,7 @@ export const environment = {
 
   // Live
   backendUrl: 'https://dev.pixtar.ae:5005',
-  baseUrl: 'https://www.3dotscreatives.com',
+  baseUrl: 'https://dnddevtest.co/ip/',
 
   // Local
   // backendUrl: 'http://localhost:3000',
