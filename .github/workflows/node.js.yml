@@ -30,3 +30,4 @@ jobs:
             cd /var/www/nodejs/ip
             git pull
             npm install --force
+            npm run build
