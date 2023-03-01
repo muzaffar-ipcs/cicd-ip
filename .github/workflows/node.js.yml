@@ -24,7 +24,7 @@ jobs:
       run: |
         echo "$DEVOPS"
       env:
-        DEVOPS: $((secrets.SECRET_TOKEN))
+        DEVOPS: $((secrets.SECRETS_TOKEN))
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
