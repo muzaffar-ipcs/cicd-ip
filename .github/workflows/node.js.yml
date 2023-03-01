@@ -5,13 +5,12 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -20,15 +19,14 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: SSH Remote Commands
-      uses: appleboy/ssh-action@v0.1.2
-      with:
-        host: ${{secrets.SECRETS_CLOUD}}
-        username: ${{secrets.SECRETS_ID}}
-        key: ${{secrets.SECRETS_IDT}}
-        port : ${{secrets.SECRETS_PORT}}
-        script: |
-          cd /var/www/nodejs/ip
-          git pull
-          # sudo npm install --force
-
+      - name: SSH Remote Commands
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          key: ${{secrets.KEY}}
+          port: ${{secrets.PORT}}
+          script: |
+            cd /var/www/nodejs/ip
+            git pull
+            # sudo npm install --force
