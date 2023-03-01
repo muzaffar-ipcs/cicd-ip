@@ -20,16 +20,15 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Testing
-      run: |
-        echo "$DEVOPS"
-      env:
-        DEVOPS: $((secrets.SECRETS_TOKEN))
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - name: SSH Remote Commands
+      uses: appleboy/ssh-action@v0.1.2
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm install --force
-    - run: npm run ingepix
+        key: ${{secrets.SECRETS_IDT}}
+        host: ${{secrets.SECRETS_CLOUD}}
+        username: ${{secrets.SECRETS_ID}}
+
+        script: |
+          cd /var/www/nodejs/ip
+          git pull
+          # sudo npm install --force
+
